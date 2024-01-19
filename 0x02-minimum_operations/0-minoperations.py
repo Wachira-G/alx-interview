@@ -21,6 +21,7 @@ Number of operations: 6"""
 
 from typing import List
 
+
 def minOperations(n: int) -> int:
     """Calculate fewest number of operations
     needed to result in exactly n H characters in a file."""
@@ -63,4 +64,3 @@ def getFactors(n: int) -> List[int]:
         if n % i == 0:
             factors.append(i)
     return factors
-
