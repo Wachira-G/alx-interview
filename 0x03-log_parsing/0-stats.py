@@ -5,10 +5,24 @@ import re
 import signal
 import sys
 
-status_codes = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
+status_codes = {
+        200: 0,
+        301: 0,
+        400: 0,
+        401: 0,
+        403: 0,
+        404: 0,
+        405: 0,
+        500: 0,
+}
+
 file_size = 0
 counter = 1
-pattern = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} - \[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d+\] "GET /projects/\d+ HTTP/1\.1" \d+ \d+'
+pattern = (
+    r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} - \[\d{4}-\d{2}-\d{2} '
+    r'\d{2}:\d{2}:\d{2}\.\d+\] "GET /projects/\d+ HTTP/1\.1" \d+ \d+'
+)
+
 
 for line in sys.stdin:
     if re.match(pattern, line):
