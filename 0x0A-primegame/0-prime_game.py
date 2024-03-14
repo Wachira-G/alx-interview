@@ -2,6 +2,7 @@
 
 """Prime game module."""
 
+
 def isWinner(x, nums):
     """Main function for getting a winner."""
     def is_prime(num):
